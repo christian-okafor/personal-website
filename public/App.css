@@ -1,0 +1,116 @@
+html {
+  background-color: #F5F6F7;
+  font-family: 'Inria Serif', serif; /*This is made possible because of the font being supplied by Google*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --cal-blue: #003262;  /*here I declare some variables, note that varibale names begin with two dashes */
+  --cal-gold: #FDB515;
+}
+body {
+  background-color: white;
+  width: 1000px;
+  padding: 0;
+  margin: 0 auto;
+}
+header {
+  padding: 25px 0;
+  background-image: linear-gradient(var(--cal-gold),var(--cal-blue));
+  margin: 0;
+  border-radius: 1%;
+} 
+figcaption {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  opacity: .80;
+}
+/*div#flexy is the flex container holding the nav and main boxes note that flex applies to the div itself as well as its immediate descendants (main and nav)*/
+div#flexy {
+  display: flex;
+  justify-content: space-between;
+  height: 700px;
+  align-items: flex-start;
+}
+/*nav holds the navigation menu. I made nav separate from div#navie since I might not keep the position of the NavBar fixed in the future (position: fixed) */
+nav {
+  width: 25%;
+  height: 100%;
+  box-shadow: 2px 0px 2px grey;
+}
+div#navie {
+  z-index: 1;
+  width: 100%; /* Inherit 100% of the width of the parent, which in this case is Nav) */
+}
+.buts{
+  text-decoration: none; /*I wanted to remove the default anchor stylings*/
+  color: var(--cal-blue);
+  font-size: 20px;
+  text-align: center; /* Since I set the display to block, this centers the text*/
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  display: block;
+}
+div#navie .buts:hover{
+  background-color: var(--cal-blue);
+  color: white;
+}
+
+main {
+  width: 75%;
+  padding-left: 20px; /*moves the text/content away from the NavBar menu */
+  padding-right: 20px;
+}
+/* Here is where I start to style elements that live inside of main#root
+ * Note that I could just use '#root' but main#root is more explicit' */
+main#root h2 {
+  text-align: center;
+}
+/* .reg class items are just referring to regular paragraph elements, that I want to add indentation to as well as line spacing for readability. */
+main#root .reg {
+  text-indent: 2.0em;
+  line-height: 1.5;
+}
+
+.ul-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ul-title-location {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.ul-job-title {
+  font-weight: bold;
+  font-style: italic;
+  display: block;
+}
+.dates-worked {
+  display: block;
+  font-style: italic
+}
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 25px;
+}
+p, li {
+  font-size: 16px;
+}
+ul {
+  line-height: 1.4;
+}
+img {
+  display: block; /* This makes it behave as a block instead of as an inline element */
+  margin: 0 auto; /* Having auto for the right and left is a shortcut to center the image, note that I could have also centered the figure element.*/
+  border-radius: 50%;
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+}

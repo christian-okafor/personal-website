@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="My personal website created using some dynamic scripting, built with react.js."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+      
+    -->
+    <!-- 
+      The following link is for the Inria Serif font.
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+    <!-- Make sure to have a final copy of App.css moved to the public folder and then change the url of the href below.-->
+    <link href='./App.css' rel='stylesheet'>
+    <title>Christian Okafor's Personal Website</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <header>
+      <figure> <!-- style the figure to center it, set margin to '0 auto' and adjust padding of header accordingly-->
+        <img src="./images/cropped-profile-pic.png" alt='A picture of my younger self'> <!-- may need to style the height and width attributes-->
+        <figcaption>
+          <b>Christian Okafor</b>
+        </figcaption>
+      </figure>
+    </header>
+    <!-- Navigation Bar and Main will be two boxes that live inside of the following div element
+    Our ReactDOM should render to the root Id.-->
+    <!-- flexy div is a flex container for the nav and main elements (the nav contains a div for the buttons (class = buts)-->
+    <div id='flexy'>
+    <nav>
+      <!-- NavBar code will be rendered here-->
+      <div id='navie'>
+        <!-- The href='javascript:void(0)' statement is so the page doesn't move/readjust when clicking the page
+        Refer to the index.js file to see that Event listeners were added to the btn anchors-->
+      <a id='abt' href='javascript:void(0)' class='buts'> About Me </a>
+      <a id='skl' href='javascript:void(0)' class='buts'> Skills</a>
+      <a id='exp' href='javascript:void(0)' class='buts'> Experience </a>
+      <a id='ext' href='javascript:void(0)' class='buts'> Extracurriculars </a>
+      <!-- The href for the download link will be replaced by a (relative) url to the document. -->
+      <a id='dwn' href='./Resume_Christian_Okafor.pdf' download='Resume-Christian-Okafor-PDF' class='buts'>Download Resume (PDF)</a>
+      </div>
+    </nav>
+    <main id="root">
+     <!-- Content should change here based on navbar button clicked (should initiate eventListener on click)--> 
+    </main>
+    </div>
+    <footer id='foot'>
+      <!-- Contact info will go here, perhaps behind a captcha-->
+      <address>
+        Tel: 713-385-six.two.nine.eight<br>
+        Houston, TX <br>
+      </address>
+    </footer>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
