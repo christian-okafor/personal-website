@@ -53,6 +53,7 @@ div#navie {
   display: block;
 }
 div#navie .buts:hover{
+  transition: background-color 200ms ease 50ms;
   background-color: var(--cal-blue);
   color: white;
 }
