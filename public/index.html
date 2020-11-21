@@ -46,20 +46,17 @@
     Our ReactDOM should render to the root Id.-->
     <!-- flexy div is a flex container for the nav and main elements (the nav contains a div for the buttons (class = buts)-->
     <div id='flexy'>
-    <nav>
-      <!-- NavBar code will be rendered here-->
       <div id='navie'>
         <!-- The href='javascript:void(0)' statement is so the page doesn't move/readjust when clicking the page
         Refer to the index.js file to see that Event listeners were added to the btn anchors-->
-      <a id='abt' href='javascript:void(0)' class='buts'> About Me </a>
+      <a id='abt' href='javascript:void(0)' class='buts buts-top'> About Me </a>
       <a id='skl' href='javascript:void(0)' class='buts'> Skills</a>
       <a id='exp' href='javascript:void(0)' class='buts'> Experience </a>
       <a id='ext' href='javascript:void(0)' class='buts'> Extracurriculars </a>
       <!-- The href for the download link will be replaced by an absolute url to the document stored on the web.
       The relative path way wasn't working. -->
-      <a id='dwn' href='https://github.com/christian-okafor/personal-website/blob/main/public/Resume_Christian_Okafor.pdf?raw=True' download='Resume-Christian-Okafor-PDF' class='buts'>Download Resume (PDF)</a>
+      <a id='dwn' href='https://github.com/christian-okafor/personal-website/blob/main/public/Resume_Christian_Okafor.pdf?raw=True' download='Resume-Christian-Okafor-PDF' class='buts buts-bot'>Download Resume (PDF)</a>
       </div>
-    </nav>
     <main id="root">
      <!-- Content should change here based on navbar button clicked (should initiate eventListener on click)--> 
     </main>

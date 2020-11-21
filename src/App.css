@@ -5,19 +5,34 @@ html {
   -moz-osx-font-smoothing: grayscale;
   --cal-blue: #003262;  /*here I declare some variables, note that varibale names begin with two dashes */
   --cal-gold: #FDB515;
+  display: flex; /*I did this to center the body instead of relying on the margin: 0 auto trick */
+  flex-flow: column nowrap;
+  align-items: center;
 }
 body {
-  background-color: white;
+  background-color: rgba(0,0,0,0);
   width: 1000px;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+  border-radius: 3px;
 }
 header {
   padding: 25px 0;
-  background-image: linear-gradient(var(--cal-gold),var(--cal-blue));
+  background: linear-gradient(45deg, var(--cal-gold) 5%, var(--cal-blue)90%);
   margin: 0;
-  border-radius: 1%;
-} 
+  border-radius: 3px;
+  z-index: 1;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+figure {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+img {
+  border: 5px solid rgba(255,255,255,.2);
+}
 figcaption {
   margin: 0;
   font-size: 24px;
@@ -33,14 +48,18 @@ div#flexy {
   align-items: flex-start;
 }
 /*nav holds the navigation menu. I made nav separate from div#navie since I might not keep the position of the NavBar fixed in the future (position: fixed) */
-nav {
-  width: 25%;
-  height: 100%;
-  box-shadow: 2px 0px 2px grey;
-}
 div#navie {
-  z-index: 1;
-  width: 100%; /* Inherit 100% of the width of the parent, which in this case is Nav) */
+  margin-top: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  background: white;
+  z-index: 2;
+  width: 25%;
+  border-radius: 3px;
+  box-shadow: 1px 2px 2px rgba(0,50,98,.15);
+  transition: box-shadow 200ms ease 50ms;
 }
 .buts{
   text-decoration: none; /*I wanted to remove the default anchor stylings*/
@@ -52,22 +71,41 @@ div#navie {
   padding: 10px 0;
   display: block;
 }
+.buts-top {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.buts-bot {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
 div#navie .buts:hover{
   transition: background-color 200ms ease 50ms;
   background-color: var(--cal-blue);
   color: white;
 }
+div#navie:hover {
+  box-shadow: 2px 4px 4px rgba(0,0,0,.2);
+}
 
 main {
+  margin-top: 5px;
   width: 75%;
-  padding-left: 20px; /*moves the text/content away from the NavBar menu */
+  padding-left: 5px; /*Move content away from Nav menu*/
   padding-right: 20px;
+  background: white;
+  border-radius: 3px;
+  align-self: stretch;
+  z-index: 1;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  transition: box-shadow 200ms ease 50ms;
+}
+main:hover {
+  box-shadow: 2px 2px 2px rgba(0,0,0,.2);
 }
 /* Here is where I start to style elements that live inside of main#root
  * Note that I could just use '#root' but main#root is more explicit' */
-main#root h2 {
-  text-align: center;
-}
 /* .reg class items are just referring to regular paragraph elements, that I want to add indentation to as well as line spacing for readability. */
 main#root .reg {
   text-indent: 2.0em;
@@ -82,21 +120,25 @@ main#root .reg {
 .ul-title-location {
   margin-bottom: 0;
   font-weight: bold;
+  color: var(--cal-blue);
 }
 .ul-job-title {
   font-weight: bold;
   font-style: italic;
   display: block;
+  color: var(--cal-blue);
 }
 .dates-worked {
   display: block;
-  font-style: italic
+  font-style: italic;
+  color: var(--cal-blue);
 }
-h1 {
+h2 {
   text-align: center;
   margin: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 25px;
+  color: var(--cal-blue);
 }
 p, li {
   font-size: 16px;
@@ -110,8 +152,12 @@ img {
   border-radius: 50%;
 }
 footer {
+  margin-top: 5px;
   background-color: black;
   color: white;
   text-align: center;
   padding: 25px 0;
+  z-index: 1;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
 }
