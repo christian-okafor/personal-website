@@ -5,15 +5,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
   --cal-blue: #003262;  /*here I declare some variables, note that varibale names begin with two dashes */
   --cal-gold: #FDB515;
-  display: flex; /*I did this to center the body instead of relying on the margin: 0 auto trick */
-  flex-flow: column nowrap;
-  align-items: center;
 }
 body {
+  margin: 0 auto;
   background-color: rgba(0,0,0,0);
   width: 70%;
   padding: 0;
-  margin: 0;
   border-radius: 3px;
 }
 header {
@@ -58,7 +55,7 @@ div#navie {
   z-index: 2;
   width: 25%;
   border-radius: 3px;
-  box-shadow: 1px 2px 2px rgba(0,50,98,.15);
+  box-shadow: 1px 2px 2px 2px rgba(0,50,98,.15);
   transition: box-shadow 200ms ease 50ms;
 }
 .buts{
@@ -86,23 +83,23 @@ div#navie .buts:hover{
   color: white;
 }
 div#navie:hover {
-  box-shadow: 2px 4px 4px rgba(0,0,0,.2);
+  box-shadow: 2px 4px 2px 2px rgba(0,0,0,.2);
 }
 
 main {
   margin-top: 5px;
   width: 75%;
-  padding-left: 5px; /*Move content away from Nav menu*/
+  padding-left: 20px; /*Move content away from Nav menu*/
   padding-right: 20px;
   background: white;
   border-radius: 3px;
   align-self: stretch;
   z-index: 1;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2);
   transition: box-shadow 200ms ease 50ms;
 }
 main:hover {
-  box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,.2);
 }
 /* Here is where I start to style elements that live inside of main#root
  * Note that I could just use '#root' but main#root is more explicit' */
