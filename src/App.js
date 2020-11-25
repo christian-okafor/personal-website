@@ -52,9 +52,9 @@ export class Skills extends React.Component {
           I'm also interested in picking up the following:
         </p>
         <ul>
-          <li>Full Stack Web Development</li>
+          <li>Data Visualizations</li>
           <li>User Interface Styling &amp; Design</li>
-          <li>Backend Data Pipelines (Spark, Airflow, Beam, etc.)</li>
+          <li>Backend Data Pipelines</li>
         </ul>
       </div>
     );
